@@ -7,18 +7,22 @@
     <script src="main.js"></script>
 </head>
 <body>
-<form>
-    <input type="radio" name="pizza" id="vegetarian" value="12.95">Vegetarian $12.95<br>
-    <input type="radio" name="pizza" id="hawaiian" value="14.95">Hawaiian $14.95<br>
-    <input type="radio" name="pizza" id="meat" value="16.95">Meat Lovers $16.95<br>
-    <input type="radio" name="pizza" id="works" value="18.95">The Works $18.95<br>
-    <input type="radio" name="pizza" id="cheese" value="15.95">Four Cheese $15.95<br>
-    <input type="checkbox" id="echeese" value="2.00">Extra Cheese $2.00<br>
-    <input type="checkbox" id="shroom" value="2.50">Mushrooms $2.50<br>
-    <input type="checkbox" id="chovies" value="3.00">Anchovies $3.00<br>
-    <br>
-    Total Price:<br>
-    <input type="text" id="price" value=""><br>
+<h1>Order Pizza Here:</h1>
+<form action="" method="get" name="pizzaForm">
+    What Type of Pizza Would You Like? <br />
+    <input type="radio" name="pizzaType" value="12.95" onchange="updateForm()" />Vegetarian $12.95<br />
+    <input type="radio" name="pizzaType" value="14.95" onchange="updateForm()" />Hawaiian $14.95<br />
+    <input type="radio" name="pizzaType" value="16.95" onchange="updateForm()" />Meat Lovers $16.95<br />
+    <input type="radio" name="pizzaType" value="18.95" onchange="updateForm()" />The Works $18.95<br />
+    <input type="radio" name="pizzaType" value="15.95" onchange="updateForm()" />Four Cheese $15.95<br />
+    <br />
+    <br />
+    Extra Toppings: <br />
+    <input type="checkbox" name="toppings" value="2.00" onchange="updateForm()" />Extra Cheese $2.00 <br />
+    <input type="checkbox" name="toppings" value="2.50" onchange="updateForm()" />Mushrooms  $2.50<br />
+    <input type="checkbox" name="toppings" value="3.00" onchange="updateForm()" />Anchovies $3.00<br />
+    <br />
+    Total <input type="text" readonly="readonly" name="total" />
 </form>
 </body>
 </html>
